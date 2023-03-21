@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="This is a waiting page.">
+    <title>Opgg  Waiting page</title>
+    <style>
+        html {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            height: 100%;
+            background-color: #a0abb6 ;
+        }
+
+        h1{
+            padding: 20px 0;
+            color: black;
+            font-size: 60px;
+            text-align: center;
+            text-shadow: 3px 3px 1px gray;
+        }
+        h2{
+            color: black;
+            font-size: 30px;
+            text-align: center;
+            text-shadow: 1px 1px 1px gray;
+        }
+
+        h3{
+            color: black;
+            font-size: 30px;
+            text-align: center;
+            text-shadow: 1px 1px 1px gray;
+        }
+
+        img{
+            display: block;
+            margin: 0 auto;
+        }
+        .btn {
+            border: none; /* Remove borders */
+            color: black; /* Add a text color */
+            padding: 14px 28px; /* Add some padding */
+            cursor: pointer; /* Add a pointer cursor on mouse-over */
+        }
+        .close {background-color: #FAFAFA;}
+        .close:hover {background-color: #A1A1A1;}
+    </style>
+
+</head>
+<body>
+<h1>The page is busy, please wait...</h1>
+<img src="lol-image_Resize%20Image.png" width="235" height="215" alt="lol">
+<h2>You can click the <a href="https://www.op.gg/champions">following</a> website to try to re-enter</h2>
+<h3>or try to close the page</h3>
+<!--    <input id="close" type="button" value="close the page" style="width:120px; height:30px;">-->
+<div style="text-align:center;">
+    <button class="btn close" onclick="functionA()">close</button>
+</div>
+<script>
+    function functionA(){
+        window.opener=null;
+        window.open("","_self");
+        window.close();
+    }
+</script>
+</body>
+</html>
